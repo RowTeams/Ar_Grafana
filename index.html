@@ -11,14 +11,12 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <a-scene embedded arjs>
       <a-marker preset="hiro">
-        <a-video
-            src="Video/3.mp4" 
-          width="2" height="3" 
-          position="0 0 0"
-          rotation="-90 180 180"
-          autoplay
-           
-        ></a-video>
+        <a-asset>
+        <video id="vid"  src="Video/3.mp4" autoplay loop></video>
+      </a-asset>
+       <a-video src="#vid" width="2" height="3" 
+       position="0 0 0"
+       rotation="-90 180 180"></a-video>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
