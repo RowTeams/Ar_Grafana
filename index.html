@@ -9,16 +9,23 @@
   <body>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script>
+      window.addEventListener('click', function () { 
+        document.querySelector('#vid').play();
+      });
+    </script>
     <a-scene embedded arjs>
       <a-marker preset="hiro">
         <a-asset>
-        <video id="vid"  src="Video/3.mp4" autoplay loop></video>
-      </a-asset>
-       <a-video src="#vid" width="2" height="3" 
-       position="0 0 0"
-       rotation="-90 180 180"></a-video>
+          <video id="vid" src="Video/3.mp4" loop></video>
+        </a-asset>
+        <a-video src="#vid" width="2" height="3" 
+          position="0 0 0"
+          rotation="-90 180 180">
+        </a-video>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
+
